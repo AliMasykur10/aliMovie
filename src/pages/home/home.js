@@ -1,5 +1,14 @@
+import { Link } from "react-router-dom";
+import Carousell from "../../components/carousell/carousell";
+import Navbar from "../../components/navbar/navbar";
+
 const home = () => {
-  return <h1>Home page</h1>;
+  return (
+    <div>
+      <Navbar />
+      <Carousell />
+    </div>
+  );
 };
 
 export default home;
