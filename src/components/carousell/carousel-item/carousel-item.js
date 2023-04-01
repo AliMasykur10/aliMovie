@@ -10,7 +10,7 @@ const Carousel = () => {
         </div>
         <div className="movie-desc">
           <h1 className="title">Spiderman : The Last of Us</h1>
-          <div className="genre">
+          <div className="genre-carousel">
             <p>Action</p>
             <p>Drama</p>
             <p>Romance</p>

@@ -33,7 +33,10 @@
   font-weight: 700;
   color: #fff;
 }
-.genre p {
+.genre-carousel {
+  margin-top: 1rem;
+}
+.genre-carousel p {
   display: inline;
   margin-right: 1rem;
   font-size: 1em;
