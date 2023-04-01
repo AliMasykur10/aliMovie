@@ -1,0 +1,41 @@
+.carousel {
+  position: relative;
+}
+
+.movie-banner img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.movie-banner {
+  position: relative;
+  background-color: var(--main-color);
+}
+
+.movie-banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-image: linear-gradient(rgba(255, 0, 0, 0), var(--main-color));
+  bottom: 0;
+}
+
+.movie-desc {
+  position: absolute;
+  bottom: 5rem;
+  left: 5rem;
+}
+
+.title {
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+}
+.genre p {
+  display: inline;
+  margin-right: 1rem;
+  font-size: 1em;
+  color: #fff;
+}
