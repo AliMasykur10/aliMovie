@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--main-color);
+  border-top: 1px solid white;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left img {
+  width: 200px;
+}
+
+.social-media {
+  display: flex;
+}
+.social-media box-icon {
+  width: 50px;
+  height: auto;
+  padding-right: 0.8rem;
+}
