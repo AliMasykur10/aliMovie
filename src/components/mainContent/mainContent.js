@@ -4,7 +4,7 @@ import "./mainContent.css";
 const MainContent = (props) => {
   const loopingCard = [];
   for (let i = 1; i <= 10; i++) {
-    loopingCard.push(<Card />);
+    loopingCard.push(<Card key={i} />);
   }
   return (
     <>

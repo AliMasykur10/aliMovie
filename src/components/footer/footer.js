@@ -7,7 +7,9 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="footer-left">
-          <img src={logo} alt="alimibra logo" title="alimovie" />
+          <Link to="/">
+            <img src={logo} alt="alimibra logo" title="alimovie" />
+          </Link>
           <p>copyright &copy; alimibra</p>
         </div>
         <div className="footer-right">
@@ -19,7 +21,7 @@ const Footer = () => {
             </div>
             <div className="linkedin" title="LinkedIn">
               <Link to="https://www.linkedin.com/in/ali-masykur-155564219/" target="_blank">
-                <box-icon name="linkedin-square" type="logo" color="#ffffff"></box-icon>
+                <box-icon name="linkedin" type="logo" color="#ffffff"></box-icon>
               </Link>
             </div>
             <div className="facebook" title="Facebook">

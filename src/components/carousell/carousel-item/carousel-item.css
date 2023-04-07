@@ -31,7 +31,10 @@
 .title {
   font-size: 4em;
   font-weight: 700;
+}
+.title-carousel {
   color: #fff;
+  text-decoration: none;
 }
 .genre-carousel {
   margin-top: 1rem;
@@ -41,4 +44,9 @@
   margin-right: 1rem;
   font-size: 1em;
   color: #fff;
+}
+
+.genre-carousel {
+  color: white;
+  text-decoration: none;
 }

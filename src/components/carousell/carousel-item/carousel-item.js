@@ -1,20 +1,36 @@
+// import { useState } from "react";
 import "./carousel-item.css";
-import banner from "../../../assets/bannerFilm.png";
+import { Link } from "react-router-dom";
+// import axios from "axios";
 
-const Carousel = () => {
+const Carousel = (props) => {
+  const backdropUrl = (backdropPath) => {
+    return `https://www.themoviedb.org/t/p/w440_and_h660_face${backdropPath}`;
+  };
+
+  const genreId = props.genre;
+
   return (
     <>
       <div className="carousel">
         <div className="movie-banner">
-          <img src={banner} alt="" />
+          <Link>
+            <img src={backdropUrl(props.banner)} alt="" />
+          </Link>
         </div>
         <div className="movie-desc">
-          <h1 className="title">Spiderman : The Last of Us</h1>
+          <h1 className="title">
+            <Link className="title-carousel">{props.title}</Link>
+          </h1>
+
           <div className="genre-carousel">
-            <p>Action</p>
-            <p>Drama</p>
-            <p>Romance</p>
-            <p>Comedy</p>
+            {genreId.map((item) => (
+              <p>
+                <Link key={item} className="genre-carousel">
+                  {item}
+                </Link>
+              </p>
+            ))}
           </div>
         </div>
       </div>

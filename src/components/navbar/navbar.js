@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="navbar-content">
         <div className="logo">
           <Link to="/">
-            <img src={myLogo} alt="Ali Movie" className="my-logo" />
+            <img src={myLogo} alt="Ali Movie" className="my-logo" title="Ali Movie" />
           </Link>
         </div>
         <div className="search-bar">

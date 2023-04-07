@@ -23,6 +23,12 @@ p {
 }
 
 .genre-main p {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   font-size: 0.8em;
+}
+
+.genre-cards,
+.judul-film {
+  color: white;
+  text-decoration: none;
 }
