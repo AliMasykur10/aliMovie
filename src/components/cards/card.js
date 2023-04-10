@@ -1,17 +1,19 @@
 import "./card.css";
-import posterFilm from "../../assets/moviePoster.png";
+// import posterFilm from "../../assets/moviePoster.png"
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
+  const moviePoster = `https://www.themoviedb.org/t/p/w440_and_h660_face/ovM06PdF3M8wvKb06i4sjW3xoww.jpg${props.poster}`;
+  console.log(props.poster);
   return (
     <>
       <div className="card">
         <Link className="poster-film">
-          <img src={posterFilm} alt="" />
+          <img src={moviePoster} alt="" />
         </Link>
         <div className="description">
           <h3>
-            <Link className="judul-film">Spiderman : The Last of Us</Link>
+            <Link className="judul-film">{props.title}</Link>
           </h3>
           <div className="genre-main">
             <p>

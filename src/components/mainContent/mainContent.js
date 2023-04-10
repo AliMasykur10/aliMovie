@@ -2,15 +2,11 @@ import Card from "../cards/card";
 import "./mainContent.css";
 
 const MainContent = (props) => {
-  const loopingCard = [];
-  for (let i = 1; i <= 10; i++) {
-    loopingCard.push(<Card key={i} />);
-  }
   return (
     <>
       <div className="main-content">
-        <h1>{props.data}</h1>
-        <div className="main-cards">{loopingCard}</div>
+        <h1>{props.title}</h1>
+        <div className="main-cards">nama</div>
       </div>
     </>
   );

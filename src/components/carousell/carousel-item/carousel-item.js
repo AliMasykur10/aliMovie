@@ -8,7 +8,7 @@ const Carousel = (props) => {
 
   useEffect(() => {
     axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US").then((res) => setData(res.data.genres));
-  });
+  }, [data]);
 
   // console.log(data);
 
@@ -28,12 +28,14 @@ const Carousel = (props) => {
       <div className="carousel">
         <div className="movie-banner">
           <Link>
-            <img src={backdropUrl(props.banner)} alt="" />
+            <img src={backdropUrl(props.banner)} alt="" title={props.title} />
           </Link>
         </div>
         <div className="movie-desc">
           <h1 className="title">
-            <Link className="title-carousel">{props.title}</Link>
+            <Link className="title-carousel" title={props.title}>
+              {props.title}
+            </Link>
           </h1>
 
           <div className="genre-carousel">{dataGenre}</div>

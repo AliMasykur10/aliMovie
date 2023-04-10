@@ -1,11 +1,7 @@
 import MainContent from "../mainContent/mainContent";
 
 const TopMovie = () => {
-  return (
-    <>
-      <MainContent data="Top Movie" />
-    </>
-  );
+  return <>{<MainContent title="Top Movie" />}</>;
 };
 
 export default TopMovie;
