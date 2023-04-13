@@ -1,5 +1,4 @@
 import "./card.css";
-import posterFilm from "../../assets/moviePoster.png";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -34,8 +33,7 @@ const Card = (props) => {
         <div className="description">
           <h3>
             <Link className="judul-film" title={props.title}>
-              {" "}
-              {props.title}{" "}
+              {props.title}
             </Link>
           </h3>
           <div className="genre-main">{dataGenre}</div>
