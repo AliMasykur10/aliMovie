@@ -1,0 +1,13 @@
+.ongoing h1 {
+  color: white;
+}
+
+.title-ongoing {
+  border-bottom: 1px solid white;
+  padding: 0 0 1rem 2rem;
+}
+.ongoing-Cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem;
+}

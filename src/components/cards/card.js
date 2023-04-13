@@ -1,10 +1,30 @@
 import "./card.css";
-// import posterFilm from "../../assets/moviePoster.png"
+import posterFilm from "../../assets/moviePoster.png";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Card = (props) => {
-  const moviePoster = `https://www.themoviedb.org/t/p/w440_and_h660_face/ovM06PdF3M8wvKb06i4sjW3xoww.jpg${props.poster}`;
-  console.log(props.poster);
+  const [data, setData] = useState([]);
+
+  const moviePoster = `https://www.themoviedb.org/t/p/w440_and_h660_face${props.poster}`;
+
+  useEffect(() => {
+    axios
+      .get("https://api.themoviedb.org/3/genre/movie/list?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US")
+      .then((res) => setData(res.data.genres))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [data]);
+
+  const genreId = props.genre;
+
+  const dataGenre = genreId.map((item) => {
+    const genreName = data.find((obj) => obj.id === item)?.name;
+    return <p key={item}>{genreName}</p>;
+  });
+
   return (
     <>
       <div className="card">
@@ -13,22 +33,12 @@ const Card = (props) => {
         </Link>
         <div className="description">
           <h3>
-            <Link className="judul-film">{props.title}</Link>
+            <Link className="judul-film" title={props.title}>
+              {" "}
+              {props.title}{" "}
+            </Link>
           </h3>
-          <div className="genre-main">
-            <p>
-              <Link className="genre-cards"> Action </Link>
-            </p>
-            <p>
-              <Link className="genre-cards"> Drama </Link>
-            </p>
-            <p>
-              <Link className="genre-cards"> Romance </Link>
-            </p>
-            <p>
-              <Link className="genre-cards"> Comedy </Link>
-            </p>
-          </div>
+          <div className="genre-main">{dataGenre}</div>
         </div>
       </div>
     </>

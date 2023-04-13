@@ -1,0 +1,15 @@
+.top-movie h1 {
+  color: white;
+}
+
+.title-topMovie {
+  border-bottom: 1px solid white;
+  padding: 0 0 1rem 2rem;
+  margin: 1rem 0;
+}
+
+.topMovieCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem;
+}

@@ -7,7 +7,12 @@ const Carousel = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.themoviedb.org/3/genre/movie/list?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US").then((res) => setData(res.data.genres));
+    axios
+      .get("https://api.themoviedb.org/3/genre/movie/list?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US")
+      .then((res) => setData(res.data.genres))
+      .catch((err) => {
+        console.log(err);
+      });
   }, [data]);
 
   // console.log(data);

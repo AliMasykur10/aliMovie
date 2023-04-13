@@ -1,16 +1,28 @@
 .card {
-  width: 250px;
-  padding: 1rem;
+  width: 170px;
+  /* padding: 1rem; */
+  margin: 0.5rem;
+  border: 1px solid white;
+  border-radius: 5px;
 }
 
 .card img {
   width: 100%;
   object-fit: contain;
+  border-radius: 5px;
 }
 
 .description {
   margin-top: 0.5rem;
+  padding: 0.5rem;
 }
+
+.description h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .description h3,
 p {
   color: white;
@@ -24,7 +36,7 @@ p {
 
 .genre-main p {
   margin-right: 0.5rem;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .genre-cards,
