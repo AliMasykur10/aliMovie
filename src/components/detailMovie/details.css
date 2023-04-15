@@ -1,0 +1,7 @@
+.details {
+  background-color: var(--main-color);
+}
+
+.movie-details h1 {
+  color: white;
+}

@@ -15,8 +15,6 @@ const Carousel = (props) => {
       });
   }, [data]);
 
-  // console.log(data);
-
   const backdropUrl = (backdropPath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${backdropPath}`;
   };
@@ -32,13 +30,13 @@ const Carousel = (props) => {
     <>
       <div className="carousel">
         <div className="movie-banner">
-          <Link>
+          <Link to={`/desc/${props.id}`}>
             <img src={backdropUrl(props.banner)} alt="" title={props.title} />
           </Link>
         </div>
         <div className="movie-desc">
           <h1 className="title">
-            <Link className="title-carousel" title={props.title}>
+            <Link to={`/desc/${props.id}`} className="title-carousel" title={props.title}>
               {props.title}
             </Link>
           </h1>
