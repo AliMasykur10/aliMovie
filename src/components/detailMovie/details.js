@@ -42,13 +42,20 @@ const DetailMovie = () => {
         </div>
         <div className="movie-details">
           <h1>{data.title}</h1>
-          <p>{data.overview}</p>
+          <p className="sinopis">
+            Sinopis : <br /> {data.overview}
+          </p>
+          <p className="judul-genre">Genre :</p>
           <div className="genre-details">
             {genreLooping.map((item) => (
               <p key={item.id}>{item.name}</p>
             ))}
           </div>
-          <p>popularity : {data.popularity}</p>
+          <p className="popularity">popularity : {data.popularity}</p>
+          <div class="release-date">
+            <p>Release Date :</p>
+            <p>{data.release_date}</p>
+          </div>
         </div>
       </div>
     </>
