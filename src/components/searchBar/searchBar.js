@@ -13,10 +13,8 @@ const SearchBar = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (searchTerm.trim() !== "") {
-      navigate(`/search?q=${searchTerm}`);
-      setSearchTerm("");
-    }
+    navigate(`/search?q=${searchTerm}`);
+    setSearchTerm(" ");
   }
 
   return (

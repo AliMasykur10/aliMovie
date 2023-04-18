@@ -32,7 +32,7 @@ const Card = (props) => {
         <div className="description">
           <h3>
             <Link to={`/desc/${props.id}`} className="judul-film" title={props.title}>
-              {props.title}
+              {props.title} {props.name}
             </Link>
           </h3>
           <div className="genre-main">{dataGenre}</div>
