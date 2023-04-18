@@ -4,7 +4,6 @@ import Navbar from "../../components/navbar/navbar";
 const Search = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q");
-  console.log(query);
   return (
     <>
       <Navbar />
