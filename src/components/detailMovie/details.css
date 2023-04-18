@@ -1,0 +1,26 @@
+.details {
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid white;
+}
+.details-poster {
+  margin-right: 1rem;
+}
+
+.movie-details h1 {
+  color: white;
+}
+
+.judul-genre,
+.sinopsis,
+.popularity {
+  margin-top: 0.5rem;
+}
+.genre-details {
+  display: flex;
+}
+.genre-details p {
+  margin-right: 0.3rem;
+}

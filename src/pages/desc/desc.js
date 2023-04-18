@@ -1,5 +1,13 @@
+import DetailMovie from "../../components/detailMovie/details";
+import Navbar from "../../components/navbar/navbar";
+
 const Desc = () => {
-  return <h1>Desc page</h1>;
+  return (
+    <>
+      <Navbar />
+      <DetailMovie />
+    </>
+  );
 };
 
 export default Desc;

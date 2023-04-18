@@ -1,7 +1,7 @@
 import "./navbar.css";
 import myLogo from "../../assets/logo.png";
-import searchIcon from "../../assets/search-icon.png";
 import { Link } from "react-router-dom";
+import SearchBar from "../searchBar/searchBar";
 
 const Navbar = () => {
   return (
@@ -12,10 +12,7 @@ const Navbar = () => {
             <img src={myLogo} alt="Ali Movie" className="my-logo" title="Ali Movie" />
           </Link>
         </div>
-        <div className="search-bar">
-          <img src={searchIcon} alt="" />
-          <input type="text" placeholder="Search Movie..." />
-        </div>
+        <SearchBar />
       </div>
     </div>
   );

@@ -25,29 +25,3 @@
   max-width: 200px;
   min-width: 100px;
 }
-
-.search-bar {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.search-bar input {
-  width: 270px;
-  height: 30px;
-  border-radius: 5px;
-  padding-left: 35px;
-  padding-right: 10px;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-.search-bar input:focus {
-  outline: none;
-}
-
-.search-bar img {
-  position: absolute;
-  width: 20px;
-  margin-left: 5px;
-}

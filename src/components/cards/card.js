@@ -15,10 +15,9 @@ const Card = (props) => {
       .catch((err) => {
         console.log(err);
       });
-  }, [data]);
+  }, []);
 
   const genreId = props.genre;
-
   const dataGenre = genreId.map((item) => {
     const genreName = data.find((obj) => obj.id === item)?.name;
     return <p key={item}>{genreName}</p>;
@@ -27,13 +26,13 @@ const Card = (props) => {
   return (
     <>
       <div className="card">
-        <Link className="poster-film">
+        <Link to={`/desc/${props.id}`} className="poster-film">
           <img src={moviePoster} alt="" />
         </Link>
         <div className="description">
           <h3>
-            <Link className="judul-film" title={props.title}>
-              {props.title}
+            <Link to={`/desc/${props.id}`} className="judul-film" title={props.title}>
+              {props.title} {props.name}
             </Link>
           </h3>
           <div className="genre-main">{dataGenre}</div>

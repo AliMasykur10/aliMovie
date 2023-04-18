@@ -5,19 +5,39 @@ import axios from "axios";
 
 const Ongoing = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
       .get("https://api.themoviedb.org/3/movie/now_playing?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US&page=1")
       .then((res) => {
-        // console.log(res.data.results);
         setData(res.data.results);
+        setLoading(false);
+        setError(null);
       })
       .catch((err) => {
-        console.log(err);
+        setLoading(false);
+        setError(err.message);
       });
   }, []);
 
+  if (loading) {
+    return (
+      <div>
+        {" "}
+        <p>Loading...</p>{" "}
+      </div>
+    );
+  }
+  if (error) {
+    return (
+      <div>
+        {" "}
+        <p>Error : {error}</p>
+      </div>
+    );
+  }
   return (
     <>
       <div className="ongoing">
@@ -26,7 +46,7 @@ const Ongoing = () => {
         </div>
         <div className="ongoing-Cards">
           {data.map((item) => (
-            <Card key={item.id} title={item.title} poster={item.poster_path} genre={item.genre_ids} />
+            <Card key={item.id} title={item.title} poster={item.poster_path} genre={item.genre_ids} id={item.id} />
           ))}
         </div>
       </div>

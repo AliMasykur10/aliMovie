@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
       <div>
         <Slider {...settings}>
           {data.map((mapData) => (
-            <Carousel key={mapData.id} title={mapData.title} banner={mapData.poster_path} genre={mapData.genre_ids} />
+            <Carousel key={mapData.id} title={mapData.title} banner={mapData.poster_path} genre={mapData.genre_ids} id={mapData.id} />
           ))}
         </Slider>
       </div>
