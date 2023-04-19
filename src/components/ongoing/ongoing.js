@@ -2,6 +2,7 @@ import "./ongoing.css";
 import Card from "../cards/card";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loadingcard from "../loadingCard/loadingCard";
 
 const Ongoing = () => {
   const [data, setData] = useState([]);
@@ -23,12 +24,7 @@ const Ongoing = () => {
   }, []);
 
   if (loading) {
-    return (
-      <div>
-        {" "}
-        <p>Loading...</p>{" "}
-      </div>
-    );
+    return <Loadingcard />;
   }
   if (error) {
     return (

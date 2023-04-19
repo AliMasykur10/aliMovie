@@ -2,6 +2,7 @@ import "./topMovie.css";
 import Card from "../cards/card.js";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loadingcard from "../loadingCard/loadingCard";
 
 const TopMovie = () => {
   const [data, setData] = useState([]);
@@ -23,11 +24,7 @@ const TopMovie = () => {
   }, []);
 
   if (loading) {
-    return (
-      <div>
-        <p>Loading...</p>
-      </div>
-    );
+    return <Loadingcard />;
   }
 
   if (error) {

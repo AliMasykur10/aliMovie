@@ -3,14 +3,14 @@
   background-color: var(--main-color);
   display: flex;
   padding: 1rem;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--second-color);
 }
 .details-poster {
   margin-right: 1rem;
 }
 
 .movie-details h1 {
-  color: white;
+  color: var(--second-color);
 }
 
 .judul-genre,
@@ -20,7 +20,25 @@
 }
 .genre-details {
   display: flex;
+  margin-top: 0.5rem;
 }
 .genre-details p {
   margin-right: 0.3rem;
+  padding: 0.3rem;
+  background-color: var(--second-color);
+  color: var(--main-color);
+  border-radius: 2px;
+  font-weight: 400;
+}
+
+.detail-loading-page {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  padding: 0.5rem;
+  border-top: 1px solid var(--second-color);
+}
+
+.release-date {
+  margin-top: 0.5rem;
 }

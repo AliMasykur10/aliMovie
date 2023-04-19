@@ -33,7 +33,7 @@
   font-weight: 700;
 }
 .title-carousel {
-  color: #fff;
+  color: var(--second-color);
   text-decoration: none;
 }
 .genre-carousel {
@@ -43,10 +43,10 @@
   display: inline;
   margin-right: 1rem;
   font-size: 1em;
-  color: #fff;
+  color: var(--second-color);
 }
 
 .genre-carousel {
-  color: white;
+  color: var(--second-color);
   text-decoration: none;
 }

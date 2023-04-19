@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../../components/cards/card";
 import "./search.css";
+import Loadingcard from "../../components/loadingCard/loadingCard";
 
 const Search = () => {
   const [data, setData] = useState([]);
@@ -28,11 +29,7 @@ const Search = () => {
   }, [query]);
 
   if (loading) {
-    return (
-      <div>
-        <p>Loading...</p>
-      </div>
-    );
+    return <Loadingcard />;
   }
   if (error) {
     return <div>Error : {error}</div>;

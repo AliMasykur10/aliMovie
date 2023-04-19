@@ -3,7 +3,7 @@
 }
 
 .title-topMovie {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--second-color);
   padding: 0 0 1rem 2rem;
   margin: 1rem 0;
 }
@@ -12,4 +12,12 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0.3rem;
+}
+
+.card-loading {
+  width: 120px;
+  height: 170px;
+  background-color: var(--third-color);
+  border-radius: 5px;
+  margin: 0.5rem;
 }

@@ -2,7 +2,7 @@
   width: 130px;
   /* padding: 1rem; */
   margin: 0.5rem;
-  border: 1px solid white;
+  border: 1px solid var(--second-color);
   border-radius: 5px;
 }
 
@@ -25,7 +25,7 @@
 
 .description h3,
 p {
-  color: white;
+  color: var(--second-color);
 }
 
 .genre-main {
@@ -41,6 +41,6 @@ p {
 
 .genre-cards,
 .judul-film {
-  color: white;
+  color: var(--second-color);
   text-decoration: none;
 }

@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--main-color);
-  border-top: 1px solid white;
+  border-top: 1px solid var(--second-color);
   padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;

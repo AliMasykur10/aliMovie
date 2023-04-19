@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import "./details.css";
+import Loadingcard from "../loadingCard/loadingCard";
 
 const DetailMovie = () => {
   const [data, setData] = useState([]);
@@ -24,7 +25,14 @@ const DetailMovie = () => {
   }, [id]);
 
   if (loading) {
-    return <div>loading...</div>;
+    return (
+      <>
+        <div className="detail-loading-page">
+          <Loadingcard />
+        </div>
+        ;
+      </>
+    );
   }
   if (error) {
     return <div>Error : {error.message}</div>;
@@ -51,7 +59,7 @@ const DetailMovie = () => {
               <p key={item.id}>{item.name}</p>
             ))}
           </div>
-          <p className="popularity">popularity : {data.popularity}</p>
+          <p className="popularity">Popularity : {data.popularity}</p>
           <div class="release-date">
             <p>Release Date :</p>
             <p>{data.release_date}</p>

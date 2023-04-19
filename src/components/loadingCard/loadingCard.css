@@ -1,0 +1,18 @@
+.parent {
+  height: 170px;
+  width: 130px;
+  background-color: var(--third-color);
+  border-radius: 5px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.child-satu {
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 1rem;
+  margin-left: 0.5rem;
+  background-color: var(--fourth-color);
+}

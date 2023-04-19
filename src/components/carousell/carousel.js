@@ -18,8 +18,8 @@ export default class SimpleSlider extends Component {
         let dataSliced = response.data.results.slice(0, 4);
         this.setState({ data: dataSliced });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
       });
   };
 
