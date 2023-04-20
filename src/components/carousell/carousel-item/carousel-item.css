@@ -29,8 +29,9 @@
 }
 
 .title {
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 700;
+  width: 85%;
 }
 .title-carousel {
   color: var(--second-color);
@@ -49,4 +50,72 @@
 .genre-carousel {
   color: var(--second-color);
   text-decoration: none;
+}
+@media screen and (max-width: 319px) {
+  .movie-banner::before {
+    height: 100%;
+  }
+  .movie-desc {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+  .genre-carousel {
+    width: 50%;
+  }
+  .genre-carousel p {
+    margin-right: 0.2rem;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .movie-banner::before {
+    height: 100%;
+  }
+  .movie-desc {
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .genre-carousel {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .movie-desc {
+    left: 1.5rem;
+    bottom: 3rem;
+  }
+  .title {
+    font-size: 1.3em;
+  }
+  .genre-carousel {
+    margin-top: 0.5rem;
+    width: 60%;
+  }
+  .genre-carousel p {
+    margin-right: 0.3rem;
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .movie-desc {
+    left: 3rem;
+    bottom: 3rem;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .genre-carousel {
+    margin-top: 0.5rem;
+  }
+  .genre-carousel p {
+    margin-right: 0.5rem;
+    font-size: 0.8em;
+  }
 }

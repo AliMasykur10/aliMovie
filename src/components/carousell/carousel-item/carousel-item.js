@@ -15,10 +15,12 @@ const Carousel = (props) => {
       });
   }, [data]);
 
+  // backdrop
   const backdropUrl = (backdropPath) => {
     return `https://www.themoviedb.org/t/p/w440_and_h660_face${backdropPath}`;
   };
 
+  // Looping Genre
   const genreId = props.genre;
 
   const dataGenre = genreId.map((item) => {

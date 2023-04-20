@@ -44,3 +44,9 @@ p {
   color: var(--second-color);
   text-decoration: none;
 }
+
+@media screen and (max-width: 319px) {
+  .card {
+    width: 80%;
+  }
+}

@@ -24,3 +24,20 @@
   margin-left: 5px;
   margin-top: 5px;
 }
+
+@media screen and (max-width: 319px) {
+  .search-bar .input-search {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .search-bar .input-search {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .search-bar .input-search {
+    width: 150px;
+  }
+}
