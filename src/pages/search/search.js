@@ -36,12 +36,11 @@ const Search = () => {
     return <div>Error : {error}</div>;
   }
 
-  console.log(data);
   return (
     <>
       <div className="search-movie">
         <Navbar />
-        <div class="search-result">
+        <div className="search-result">
           {data.map((item) => (
             <Card key={item.id} title={item.title} name={item.name} poster={item.poster_path} genre={item.genre_ids} id={item.id} />
           ))}

@@ -60,7 +60,7 @@ const DetailMovie = () => {
             ))}
           </div>
           <p className="popularity">Popularity : {data.popularity}</p>
-          <div class="release-date">
+          <div className="release-date">
             <p>Release Date :</p>
             <p>{data.release_date}</p>
           </div>
