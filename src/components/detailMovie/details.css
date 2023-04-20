@@ -42,3 +42,25 @@
 .release-date {
   margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    height: auto;
+  }
+  .details-poster img {
+    width: 250px;
+  }
+  .movie-details {
+    margin-top: 1rem;
+  }
+  .sinopsis {
+    margin-top: 0.5rem;
+  }
+  .genre-details {
+    flex-wrap: wrap;
+  }
+  .genre-details p {
+    margin-top: 0.5rem;
+  }
+}

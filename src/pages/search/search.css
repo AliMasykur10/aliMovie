@@ -8,3 +8,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1200px) {
+  .search-movie {
+    height: auto;
+  }
+}

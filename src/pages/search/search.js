@@ -5,6 +5,7 @@ import axios from "axios";
 import Card from "../../components/cards/card";
 import "./search.css";
 import Loadingcard from "../../components/loadingCard/loadingCard";
+import Footer from "../../components/footer/footer";
 
 const Search = () => {
   const [data, setData] = useState([]);
@@ -45,6 +46,7 @@ const Search = () => {
             <Card key={item.id} title={item.title} name={item.name} poster={item.poster_path} genre={item.genre_ids} id={item.id} />
           ))}
         </div>
+        <Footer />
       </div>
     </>
   );
