@@ -31,13 +31,6 @@ const Search = () => {
       });
   }, [query]);
 
-  if (loading) {
-    return <Loadingcard />;
-  }
-  if (error) {
-    return <div>Error : {error}</div>;
-  }
-
   const arrayPage = [];
   for (let i = 1; i <= page; i++) {
     arrayPage.push(
@@ -54,8 +47,26 @@ const Search = () => {
 
   const handlePageChange = (params) => {
     console.log(params);
-    console.log(data);
+    axios
+      .get(`https://api.themoviedb.org/3/search/multi?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US&query=${query}&page=${params}&include_adult=false`)
+      .then((res) => {
+        setData(res.data.results);
+        setPage(res.data.total_pages);
+        setLoading(false);
+        setError(null);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setError(err);
+      });
   };
+
+  if (loading) {
+    return <Loadingcard />;
+  }
+  if (error) {
+    return <div>Error : {error}</div>;
+  }
 
   return (
     <>
