@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ReactPaginate from "react-paginate";
 import Card from "../../components/cards/card";
 import "./search.css";
 import Loadingcard from "../../components/loadingCard/loadingCard";
@@ -31,22 +32,8 @@ const Search = () => {
       });
   }, [query]);
 
-  const arrayPage = [];
-  for (let i = 1; i <= page; i++) {
-    arrayPage.push(
-      <button
-        key={i}
-        onClick={() => {
-          handlePageChange(i);
-        }}
-      >
-        {i}
-      </button>
-    );
-  }
-
-  const handlePageChange = (params) => {
-    console.log(params);
+  const handlePageClick = (event) => {
+    const params = event.selected + 1;
     axios
       .get(`https://api.themoviedb.org/3/search/multi?api_key=583d1254a47fb88b9235f87dacba82e4&language=en-US&query=${query}&page=${params}&include_adult=false`)
       .then((res) => {
@@ -77,8 +64,28 @@ const Search = () => {
             <Card key={item.id} title={item.title} name={item.name} poster={item.poster_path} genre={item.genre_ids} id={item.id} />
           ))}
         </div>
-
-        <div className="total-page"> {arrayPage} </div>
+        <div className="div-pagination">
+          <ReactPaginate
+            nextLabel=">>"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={2}
+            pageCount={page}
+            previousLabel="<<"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="prev-item page-item"
+            previousLinkClassName="page-link"
+            nextClassName="next-item page-item"
+            nextLinkClassName="page-link"
+            breakLabel="..."
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            containerClassName="pagination"
+            activeClassName="active"
+            renderOnZeroPageCount={null}
+          />
+        </div>
         <Footer />
       </div>
     </>
